@@ -1,0 +1,71 @@
+<!doctype html>
+<html>
+
+<head>
+    <title>Contact Me</title>
+    <link rel="stylesheet" href="html5.css">
+</head>
+<header>
+        <iframe src="navigation.html" class="navigation" scrolling="no"></iframe>
+</header>
+<body>
+
+    <form id="contactMeForm">
+        <fieldset>
+            <legend>Contact Me</legend>
+            <table class="center">
+                <tr>
+                    <td>
+                        <label for="firstName">First Name</label>
+                    </td>
+                    <td>
+                        <input type="text" id="firstName" autofocus placeholder="Please enter your First Name" required pattern="[a-zA-Z]{}" title="Please do not enter any special charcters">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="firstName">Last Name</label>
+                    </td>
+                    <td>
+                        <input type="text" id="lastName" placeholder="Please enter your Last Name" required pattern="[a-zA-Z]{}" title="Please do not enter any special charcters"> 
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="email">Email ID</label>
+                    </td>
+                    <td>
+                        <input type="email" id="email" required placeholder="Please enter your email id" >
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="phone">Contact No</label>
+                    </td>
+                    <td>
+                        <input type="text" id="phone"  maxlength="10" required placeholder="Please enter your 10 digit Phone No." pattern="[0-9]{10}" title="Please enter your 10 digit contact number without any space or special character">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <label for="remark">Remarks</label>
+                    </td>
+                    <td>
+                        <textarea id="remark" required></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" class="button">
+                        <button type="submit" class="button">Submit</button>
+                        <button type="reset" class="button">Reset</button>
+                        <br>
+                        <br>
+                    </td>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+
+</body>
+
+</html>
