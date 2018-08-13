@@ -3,69 +3,60 @@
 
 <head>
     <title>Contact Me</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="html5.css">
+    <script>
+        $(function () {
+            $("#navigation").load("navigation.html");
+        });
+    </script>
 </head>
 <header>
-        <iframe src="navigation.html" class="navigation" scrolling="no"></iframe>
+    <div id="navigation"></div>
 </header>
 <body>
+    <section class="container" style="width: 75%">
+        <legend>Contact Me</legend>
+        <form class="form-horizontal">
 
-    <form id="contactMeForm">
-        <fieldset>
-            <legend>Contact Me</legend>
-            <table class="center">
-                <tr>
-                    <td>
-                        <label for="firstName">First Name</label>
-                    </td>
-                    <td>
-                        <input type="text" id="firstName" autofocus placeholder="Please enter your First Name" required pattern="[a-zA-Z]{}" title="Please do not enter any special charcters">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="firstName">Last Name</label>
-                    </td>
-                    <td>
-                        <input type="text" id="lastName" placeholder="Please enter your Last Name" required pattern="[a-zA-Z]{}" title="Please do not enter any special charcters"> 
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="email">Email ID</label>
-                    </td>
-                    <td>
-                        <input type="email" id="email" required placeholder="Please enter your email id" >
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="phone">Contact No</label>
-                    </td>
-                    <td>
-                        <input type="text" id="phone"  maxlength="10" required placeholder="Please enter your 10 digit Phone No." pattern="[0-9]{10}" title="Please enter your 10 digit contact number without any space or special character">
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <label for="remark">Remarks</label>
-                    </td>
-                    <td>
-                        <textarea id="remark" required></textarea>
-                    </td>
-                </tr>
-                <tr>
-                    <td colspan="2" class="button">
-                        <button type="submit" class="button">Submit</button>
-                        <button type="reset" class="button">Reset</button>
-                        <br>
-                        <br>
-                    </td>
-                </tr>
-            </table>
-        </fieldset>
-    </form>
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label col-form-label-sm" for="firstName">First Name</label>
+                <input type="text" id="firstName" class="form-control form-control-sm col-sm-6" autofocus placeholder="Please enter your First Name"
+                    required pattern="[a-zA-Z]{}" title="Please do not enter any special charcters">
 
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label col-form-label-sm" for="lastName">Last Name</label>
+                <input type="text" id="lastName" class="form-control form-control-sm col-sm-6" placeholder="Please enter your Last Name"
+                    required pattern="[a-zA-Z]{}" title="Please do not enter any special charcters">
+            </div>
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label col-form-label-sm" for="email">Email ID</label>
+                <input type="email" id="email" class="form-control form-control-sm col-sm-6" required placeholder="Please enter your email id">
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label col-form-label-sm" for="phone">Contact No</label>
+                <input type="number" id="phone" class="form-control form-control-sm col-sm-6" maxlength="10" required placeholder="Please enter your 10 digit Phone No."
+                    title="Please enter your 10 digit contact number without any space or special character">
+            </div>
+
+            <div class="form-group row">
+                <label class="col-sm-4 col-form-label col-form-label-sm" for="remark">Remarks</label>
+                <textarea id="remark" class="form-control form-control-sm col-sm-6" required></textarea>
+            </div>
+
+            <div class="btn btn-toolbar row">
+                <button type="submit" class="btn btn-md btn-primary">Submit</button>
+                <button type="reset" class="btn btn-md  btn-primary">Reset</button>
+            </div>
+
+        </form>
+    </section>
 </body>
 
 </html>
