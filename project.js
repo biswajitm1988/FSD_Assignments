@@ -61,15 +61,16 @@ function addNewProject() {
     rnrDetailsRow.append("Roles and Responsibilities");
     rnrDetailsRow.append(rnrCol);
 
-        
-    newProjectDetailsTable.setAttribute("class","table");
-    newProjectDetailsTable.setAttribute("class","table-responsive");
-    newProjectDetailsTable.append(architectureDetailsRow);
-    newProjectDetailsTable.append(technologyDetailsRow);
-    newProjectDetailsTable.append(rnrDetailsRow);
+    tbodyDetails= document.createElement("tbody");        
+    tbodyDetails.append(architectureDetailsRow);
+    tbodyDetails.append(technologyDetailsRow);
+    tbodyDetails.append(rnrDetailsRow);
+    
+    newProjectDetailsTable.setAttribute("class","table table-responsive");
+    newProjectDetailsTable.append(tbodyDetails);
 
     newtd.setAttribute("colspan", 5);
-    newtd.appendChild(newProjectDetailsTable);    
+    newtd.append(newProjectDetailsTable);    
     
         
     newProjectDetails.setAttribute("class","collapse")
