@@ -8,7 +8,9 @@
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
         <link rel="stylesheet" href="html5.css">
+        <script src="project.js"></script>
         <script>
                 $(function () {
                         $("#navigation").load("navigation.html");
@@ -23,10 +25,114 @@
         <div class="container">
 
                 <div class="jumbotron text-center">
-                        <h3>Highlights</h3>
+                        <h3>Projects</h3>
+                </div>
+                <table class=" table table-responsive table-striped table-hover" id="projectTable">
+                        <thead>
+                                <tr>
+                                        <th class="col-sm-4">Title</th>
+                                        <th class="col-sm-2">Start Date</th>
+                                        <th class="col-sm-2">End date</th>
+                                        <th class="col-sm-2">Role</th>
+                                        <th class="col-sm-2">Actions</th>
+                                </tr>
+                        </thead>
+                        <tr>
+
+                                <td>Wyndham Destination Network</td>
+                                <td>Nov-2010</td>
+                                <td>Aug-2018</td>
+                                <td>Java Developer</td>
+                                <td id="actionBtns">
+                                        <div class="btn-group btn-group-sm">
+                                                <div class="btn-group">
+                                                        <a href="#" data-toggle="collapse" data-target="#collapseDetails1" class="clickable" alt="See Details" title="Details">
+                                                                <span class="glyphicon glyphicon-eye-open"></span>
+                                                        </a>
+                                                        <a href="#" data-toggle="collapse" data-target="#collapseForm" class="clickable" alt="Add Project" title="New Project">
+                                                                <span class="glyphicon glyphicon-plus"></span>
+                                                        </a>
+                                                </div>
+                                        </div>
+                                </td>
+                        </tr>
+                        <tr class="collapse" id="collapseDetails1">
+                                <td colspan="5">
+                                <table class="table table-responsive">
+                                        <tr>
+                                                <td>Architecture</td>
+                                                <td>Enterprise-wide, Web enabled, Java based, N-tier architecture developed using
+                                                        J2EE architecture designed on the base of MVC architectural design
+                                                        pattern along with Service Oriented Architecture(SOA)
+                                                </td>
+                                        </tr>
+                                        <tr>
+                                                <td>Technology</td>
+                                                <td>JSP, Servlets, JavaScript, Spring MVC, JDBC, Hibernate, SOA, Web Services,
+                                                        OSB, BPEL, Endeca, Omniture, Salesforce, IBM ilog JRules</td>
+                                        </tr>
+                                        <tr>
+                                                <td>Roles and Responsibilities</td>
+                                                <td>Responsible for requirements gathering and analyses. Involved in design,
+                                                        development, unit-testing, bug fixing and support for the system.
+                                                        Spring is the MVC framework which used for the application.
+                                                </td>
+                                        </tr>
+
+                                </table>
+                        </td>
+                        </tr>
+                        <tbody id="tbodyItems">
+                        </tbody>
+                </table>
+
+                <div id="collapseDetails">
+                </div>
+                <div class="collapse" id="collapseForm">
+                        <form class="form-horizontal ">
+                                <div class="form-group row">
+                                        <label class="col-sm-4 col-form-label col-form-label-sm" for="title">Title</label>
+                                        <input type="text" id="title" class="form-control form-control-sm col-sm-2" autofocus placeholder="Title" required pattern="[a-zA-Z]{}"
+                                                title="Please do not enter any special charcters">
+
+                                </div>
+                                <div class="form-inline form-group row">
+                                        <label class="col-sm-1 col-form-label col-form-label-sm" for="startDate">Start Date</label>
+                                        <input type="date" id="startDate" class="form-control form-control-sm  col-sm-5">
+
+                                        <label class="col-sm-1 col-form-label col-form-label-sm" for="endDate">End Date</label>
+                                        <input type="date" id="endDate" class="form-control form-control-sm  col-sm-5">
+
+                                </div>
+                                <div class="form-group row">
+                                </div>
+                                <div class="form-group row">
+                                        <label class="col-sm-4 col-form-label col-form-label-sm" for="role">Role</label>
+                                        <input type="text" id="role" class="form-control form-control-sm  col-sm-2" autofocus placeholder="Role" required pattern="[a-zA-Z]{}"
+                                                title="Please do not enter any special charcters">
+
+                                </div>
+
+                                <div class="form-group row">
+                                        <label class="col-sm-4 col-form-label col-form-label-sm" for="architecture">Architecture</label>
+                                        <textarea id="architecture" class="form-control form-control-sm  col-sm-2"></textarea>
+                                </div>
+                                <div class="form-group row">
+                                        <label class="col-sm-4 col-form-label col-form-label-sm" for="technology">Technology</label>
+                                        <textarea id="technology" class="form-control form-control-sm  col-sm-2"></textarea>
+                                </div>
+
+                                <div class="form-group row">
+                                        <label class="col-sm-4 col-form-label col-form-label-sm" for="rnr">Roles and Responsibilities</label>
+                                        <textarea id="rnr" class="form-control form-control-sm  col-sm-2"></textarea>
+                                </div>
+                                <div class="btn btn-toolbar row">
+                                        <button type="submit" class="btn btn-md btn-primary" onclick="addNewProject()">Add New</button>
+                                        <button type="reset" class="btn btn-md  btn-default">Reset</button>
+                                </div>
+                        </form>
                 </div>
         </div>
-
 </body>
 
 </html>
